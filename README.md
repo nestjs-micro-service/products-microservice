@@ -12,6 +12,6 @@ The `products-ms` repository contains the code for a microservice responsible fo
 
 To use this Microservice repository, follow the setup instructions provided in the README file of the Products-launcher repository.
 
-[Products-launcher repository](https://github.com/nestjs-micro-service/products-launcher) 
+[Products-launcher repository](https://github.com/nahuel-98/products-launcher) 
 
 
