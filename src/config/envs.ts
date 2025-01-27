@@ -7,18 +7,17 @@ interface EnvVars {
   NATS_SERVERS: string[];
 }
 
-//El validador de esquema es para que en caso de que no exista la variable de entorno, se lance una excepción e impida levantar la app de Nest
+
 const envsSchema = joi
   .object({
     PORT: joi.number().required(),
     DATABASE_URL: joi.string().required(),
     NATS_SERVERS: joi.array().items(joi.string()).required(),
   })
-  .unknown(true); //Porque además de las variables de arriba, voy a tener otras más que acá no menciono
-
+  .unknown(true);
 const { error, value } = envsSchema.validate({
   ...process.env,
-  NATS_SERVERS: process.env.NATS_SERVERS?.split(','), //Para el caso en el que tenga que levantar múltiples servidores Nats
+  NATS_SERVERS: process.env.NATS_SERVERS?.split(','),
 });
 
 if (error) {

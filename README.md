@@ -2,7 +2,7 @@
 
 ## Description
 
-The `products-ms` repository contains the code for a microservice responsible for managing product-related operations. This microservice is built using NestJS and communicates with other services via NATS messaging. It includes features such as product creation, updating, deletion, and retrieval, and uses Prisma as the ORM for database interactions.
+The `products-ms` repository contains the code for a microservice responsible for managing product-related operations. This microservice is built using NestJS and communicates with other services via NATS messaging. It includes features such as product creation, updating, deletion, and retrieval, and uses Prisma as the ORM for SQLite database interactions.
 
 ## Architecture
 
